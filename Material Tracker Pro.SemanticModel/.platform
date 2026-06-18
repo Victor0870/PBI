@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Material Tracker Pro"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "58673abc-5671-4c0d-8df5-b65281969fca"
+  }
+}

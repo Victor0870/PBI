@@ -1,0 +1,31 @@
+{
+  "description": "Data source paths for other machines and GitHub (D:\\Box)",
+  "basePowerBI": "D:\\Box\\05. Supply Chain Management\\1. SCM (Planning)\\PowerBI",
+  "basePlan": "D:\\Box\\05. Supply Chain Management\\1. SCM (Planning)\\1. Mr Thang\\2. Plan",
+  "mappings": [
+    {
+      "file": "Code LV.xlsx",
+      "path": "D:\\Box\\05. Supply Chain Management\\1. SCM (Planning)\\PowerBI\\Code LV.xlsx"
+    },
+    {
+      "file": "UoM Additive.xlsx",
+      "path": "D:\\Box\\05. Supply Chain Management\\1. SCM (Planning)\\PowerBI\\UoM Additive.xlsx"
+    },
+    {
+      "file": "Product Category.xlsx",
+      "path": "D:\\Box\\05. Supply Chain Management\\1. SCM (Planning)\\PowerBI\\Product Category.xlsx"
+    },
+    {
+      "file": "Updated format IAIB daily 13.05.xlsx",
+      "path": "D:\\Box\\05. Supply Chain Management\\1. SCM (Planning)\\PowerBI\\Updated format IAIB daily 13.05.xlsx"
+    },
+    {
+      "file": "Summary data.xlsm",
+      "path": "D:\\Box\\05. Supply Chain Management\\1. SCM (Planning)\\1. Mr Thang\\2. Plan\\Summary data.xlsm"
+    }
+  ],
+  "salesFolder": {
+    "comment": "Reserved for future Folder.Files query — not in model yet",
+    "path": "D:\\Box\\05. Supply Chain Management\\1. SCM (Planning)\\PowerBI\\Original"
+  }
+}

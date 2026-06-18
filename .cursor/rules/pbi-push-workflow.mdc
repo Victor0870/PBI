@@ -1,0 +1,45 @@
+---
+description: Power BI push workflow — switch paths before/after GitHub push
+globs: Material Tracker Pro.SemanticModel/model.bim
+alwaysApply: false
+---
+
+# PBI Push Workflow — Material Tracker Pro
+
+Remote: https://github.com/Victor0870/PBI
+
+## Default state on this machine
+
+- `model.bim` uses **local** paths from `paths.local.json` (`D:\PBI\Data\...`)
+- GitHub must always receive **remote** paths from `paths.remote.json` (`D:\Box\...`)
+
+## When user requests push / đẩy lên github / commit and push
+
+Run these steps **in order** — do not skip:
+
+1. `.\scripts\switch-paths.ps1 -Mode Remote`
+2. Verify `model.bim` contains `D:\Box\` and NOT `D:\PBI\Data\`
+3. `git status` and `git diff` — review changes
+4. `git add` relevant files + `git commit` (if changes exist)
+5. `git push -u origin main` (or current branch)
+6. **Always** run `.\scripts\switch-paths.ps1 -Mode Local`
+7. Verify `model.bim` contains `D:\PBI\Data\` and NOT `D:\Box\`
+8. Tell user push succeeded and local paths are restored
+
+If step 5 fails, still run step 6 before reporting the error.
+
+## Never
+
+- Push while `model.bim` uses `D:\PBI\Data\` paths
+- Forget to restore local paths after push
+- Commit `paths.local.json` to Git
+
+## First-time / path setup
+
+- Remote paths: `paths.remote.json` (committed)
+- Local paths: `paths.local.json` (gitignored)
+- Switch script: `scripts/switch-paths.ps1` (calls `scripts/switch-paths.py`)
+
+## Future: sales folder (Original)
+
+When `Folder.Files` query is added to model, update both paths JSON files and re-run switch-paths.

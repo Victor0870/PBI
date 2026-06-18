@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Material Tracker Pro"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6ed931f7-12e1-4cc9-bf34-89a300a8d1d0"
+  }
+}
